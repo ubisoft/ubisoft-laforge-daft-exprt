@@ -1,0 +1,6 @@
+# MFA dependencies
+baumwelch
+ngram
+openblas
+openfst
+pynini
