@@ -22,7 +22,7 @@ Visit the [releases](https://github.com/ubisoft/ubisoft-laforge-daft-exprt/relea
   - [Dataset Formatting](#dataset-formatting)
   - [Data Pre-Processing](#data-pre-processing)
   - [Training](#training)
-  - [Fine-Tuning](#fine-tuning)
+  - [Vocoder Fine-Tuning](#vocoder-fine-tuning)
   - [TTS Synthesis](#tts-synthesis)
 - [Citation](#citation)
 - [Contributing](#contributing)
@@ -60,7 +60,7 @@ Build the Docker image using the associated Dockerfile:
 This quick start guide will illustrate how to use the different scripts of this repository to:
 1. Format datasets
 2. Pre-process these datasets
-3. Train DaftExprt on the pre-processed data
+3. Train Daft-Exprt on the pre-processed data
 4. Generate a dataset for vocoder fine-tuning
 5. Use Daft-Exprt for TTS synthesis
 
@@ -184,7 +184,7 @@ Default [batch size](src/daft_exprt/hparams.py#L66) and [gradient accumulation](
 The code also supports tensorboard logging. To display logging outputs:  
 `tensorboard --logdir_spec=EXPERIMENT_NAME:/workdir/repo_dir/trainings/EXPERIMENT_NAME/logs`
 
-### Fine-Tuning
+### Vocoder Fine-Tuning
 Once training is finished, you can create a dataset for vocoder fine-tuning:
 ```
 python training.py \
@@ -224,7 +224,7 @@ The script also offers the possibility to:
 
 ## Citation
 ```
-@article{Zaidi2018,
+@article{Zaidi2021,
 abstract = {},
 journal = {arXiv},
 arxivId = {2108.02271},
